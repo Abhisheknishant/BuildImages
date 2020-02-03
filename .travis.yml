@@ -13,7 +13,8 @@ services:
 
 before_install:
   - git clone --depth=50 --branch=master https://github.com/pytorch/pytorch.git
-  - git checkout -b v1.4.0a0 v1.4.0a0
+  #- git checkout -b v1.4.0a0 v1.4.0a0
+  - git checkout v1.4.0a0
   - git submodule update --init --recursive
   - cd pytorch
 
