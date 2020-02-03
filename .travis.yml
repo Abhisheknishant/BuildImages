@@ -13,7 +13,8 @@ services:
 
 before_install:
   - git clone https://github.com/pytorch/pytorch.git
-  - git fetch --all --prune 
+  - git config remote.origin.fetch "+refs/heads/*:refs/remotes/origin/*"
+  - git pull
   - git checkout v1.4.0a0
   - git submodule update --init --recursive
   - cd pytorch
