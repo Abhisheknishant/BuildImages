@@ -24,6 +24,7 @@ before_script:
   - export NO_MKLDNN=1 
   - export NO_NNPACK=1
   - export NO_QNNPACK=1
+  - pip install pyyaml
   
 script:
   - python3 setup.py build
