@@ -16,7 +16,7 @@ before_install:
 
 before_script:
   - mkdir pytorch_install && cd pytorch_install
-  - git clone --branch=1.4.0 --depth=1 --recursive https://github.com/pytorch/pytorch
+  - git clone --branch=v1.4.0 --depth=1 --recursive https://github.com/pytorch/pytorch
   - cd pytorch
   
 script:
