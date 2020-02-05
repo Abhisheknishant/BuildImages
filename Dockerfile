@@ -10,4 +10,4 @@ RUN pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple && 
     . /pytorch-env/bin/activate && \
     git clone --depth=1 --branch=v1.4.0 --recursive https://github.com/pytorch/pytorch.git && \
     cd pytorch && \
-    pip install -r requireents.txt 
+    pip install -r requirements.txt 
