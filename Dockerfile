@@ -5,8 +5,8 @@ RUN apt-get update && \
     apt-get install -y python3-pip && \
     apt-get clean
     
-RUN pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple && \
-    pip install --no-cache-dir virtualenv && \
+RUN pip3 config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple && \
+    pip3 install --no-cache-dir virtualenv && \
     virtualenv pytorch-env && \
     . /pytorch-env/bin/activate && \
     git clone --depth=1 --branch=v1.4.0 --recursive https://github.com/pytorch/pytorch.git && \
