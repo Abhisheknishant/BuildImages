@@ -1,8 +1,12 @@
 FROM tyuio6914/debian
 
 RUN apt-get update && \
-    apt-get install -y libopenblas-dev ninja-build cmake git  && \
+    apt-get install -y libopenblas-dev ninja-build cmake git ccache && \
     apt-get install -y python3-pip && \
+    /usr/sbin/update-ccache-symlinks && \
+    ccache -M 25Gi && \
+    ccache -F 0 && \
+    export PATH="/usr/lib/ccache:$PATH" && \
     apt-get clean
     
 RUN git clone --depth=1 --branch=v1.4.0 --recursive https://github.com/pytorch/pytorch.git && \
