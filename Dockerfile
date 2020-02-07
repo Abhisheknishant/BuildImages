@@ -3,6 +3,7 @@ FROM tyuio6914/debian
 RUN apt-get update && \
     apt-get install -y libopenblas-dev ninja-build cmake git ccache && \
     apt-get install -y python3-pip && \
+    echo '. /pytorch-env/bin/activate' >> .bashrc && \
     /usr/sbin/update-ccache-symlinks && \
     ccache -M 25Gi && \
     ccache -F 0 && \
