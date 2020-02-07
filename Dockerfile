@@ -11,6 +11,6 @@ RUN pip3 install --no-cache-dir virtualenv && \
     virtualenv pytorch-env && \
 	. /pytorch-env/bin/activate && \
 	echo '. /pytorch-env/bin/activate' >> .bashrc && \
-	pip install --no-cache-dir torch-1.4.0a0+7f73f1d-cp37-cp37m-linux_aarch64.whl && \
-	pip install --no-cache-dir torchvision-0.5.0-cp37-cp37m-linux_aarch64.whl
+	pip install --no-cache-dir /root/torch-1.4.0a0+7f73f1d-cp37-cp37m-linux_aarch64.whl && \
+	pip install --no-cache-dir /root/torchvision-0.5.0-cp37-cp37m-linux_aarch64.whl
     
